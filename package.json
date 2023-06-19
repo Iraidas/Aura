@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
+    "html": "node-w3c-validator -f lint -evH -i dist/**/*.html",
     "dev": "gulp",
     "build": "gulp build --build",
     "svgSprive": "gulp svgSprive"
@@ -36,6 +37,7 @@
     "gulp-webp": "latest",
     "gulp-webp-html-nosvg": "latest",
     "gulp-webpcss": "latest",
+    "node-w3c-validator": "^2.0.2",
     "sass": "latest",
     "webp-converter": "2.2.3",
     "webpack": "latest",
