@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title></title>
     <title>Главная</title>
   </head>
   <body>
-    <header class="header"></header>
-    <main class="main">Этот текст я написала чтобы проверить как работает типограф</main>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__logo"><img class="header__logo-image" src="img/icons/icons.svg#Aura-logo" alt="Aura logo" width="80" height="80"></div>
+        <ul class="header__menu">
+          <li class="header__menu-item"><a class="header__link link" href="#">Авторы</a></li>
+          <li class="header__menu-item"> <a class="header__link link" href="#">Коллекции</a></li>
+          <li class="header__menu-item"> <a class="header__link link" href="#">Сервисы</a></li>
+        </ul><a class="header__wallet button-1" href="#">Кошелёк</a><a class="header__wallet-mobile" href="#"></a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container container">
+          <h1 class="hero__title title">Площадка <br>для реализации <br>криптостикеров</h1>
+          <div class="hero__link-group"> <a class="hero__link button-2" href="#">Купить</a><a class="hero__link button-3" href="#">Стать автором</a></div>
+        </div>
+      </section>
+    </main>
     <footer class="footer"></footer>
     <script src="js/app.min.js"></script>
   </body>
