@@ -1,0 +1,22 @@
+.button-2 {
+    @include button;
+    padding: 25px 55px;
+    background: $button;
+    color: $black;
+}
+
+@media ($device-hover) and ($device-pointer) {
+    .button-2 {
+        &:hover {
+            background: $primary;
+            cursor: pointer;
+        }
+        &:focus {
+            background: $primary;
+            outline: none;
+        }
+        &:active {
+            background: $active;
+        }
+    }
+}
