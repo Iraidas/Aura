@@ -1,0 +1,32 @@
+.link {
+    font-family: 'Muller', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 10px;
+    margin-top: 20px;
+    color: $black;
+}
+
+@media ($device-hover) and ($device-pointer) {
+    .link {
+        &:hover {
+            cursor: pointer;
+            color: $primary;
+        }
+        &:focus {
+            outline: 3px solid $active;
+        }
+        &:active {
+            color: $active;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .link {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}

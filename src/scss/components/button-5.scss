@@ -1,0 +1,41 @@
+.button-5 {
+    @include button;
+    padding: 25px 80px;
+    color: $black;
+    background: $primary;
+    position: relative;
+    z-index: 5;
+    &::before {
+        content: "";
+        background: white;
+        position: absolute;
+        border-radius: 40px;
+        inset: 5px;
+        z-index: -1;
+    }
+}
+
+@media ($device-hover) and ($device-pointer) {
+    .button-5 {
+        &:hover {
+            background: $primary;
+            cursor: pointer;
+            &::before {
+                background: $button;
+            }
+        }
+        &:focus {
+            background: $primary;
+            outline: none;
+            &::before {
+                background: $primary;
+            }
+        }
+        &:active {
+            background: $active;
+            &::before {
+                background: $active;
+            }
+        }
+    }
+}

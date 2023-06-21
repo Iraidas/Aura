@@ -1,0 +1,11 @@
+@mixin button {
+    display: block;
+    white-space: nowrap;
+    font-family: 'Muller', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 40px;
+}

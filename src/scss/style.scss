@@ -1,5 +1,18 @@
-@import "fonts";
-@import "global";
 @import "reset";
+@import "global";
 @import "vars";
-@import "vendors"
+@import "mixins";
+@import "components";
+@import "fonts";
+@import "vendors";
+
+@import "sections";
+
+body {
+    font-family: Muller, sans-serif; 
+    font-weight: 700;
+}
+
+img {
+    object-fit: contain;
+}
