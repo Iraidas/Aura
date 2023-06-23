@@ -4,6 +4,7 @@
     align-items: start;
     justify-content: center;
     min-height: 680px;
+    max-height: 680px;
     height: calc(100lvh - 80px);
     background: $black;
     position: relative;
@@ -71,33 +72,69 @@
 
 @media screen and (max-width: 768px) {
     .hero {
-        padding-top: 100px;
-        min-height: 850px;
+        padding-top: 80px;
+        min-height: 630px;
+        max-height: 660px;
         &__container {
-            padding-bottom: 100px;
+            padding-bottom: 80px;
         }
         &__title {
-            font-size: 60px;
+            font-size: 58px;
+        }
+        &__link-group {
+            flex-wrap: wrap;
+            gap: 30px 20px;
         }
         &::after {
             left: 0;
             width: 768px;
             position: relative;
             background: url('@img/stickers_hero_2.png') 0 0 no-repeat;
+            background-size: cover !important;
         }
     }
 }
 
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 572px) {
     .hero {
-        min-height: 750px;
         &__title {
-            font-size: 50px;
+            font-size: 41px;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .hero {
+        padding-top: 65px;
+        min-height: 530px;
+        max-height: 560px;
+        &__container {
+            padding-bottom: 0;
+        }
+        &__title {
+            font-size: 35px;
+        }
+        &__link-group {
+            flex-wrap: wrap;
+            padding-bottom: 45px;
+            gap: 15px;
         }
         &__link:first-child,
         &__link:last-child {
             font-size: 16px;
             line-height: 16px;
+        }
+        &__link:first-child {
+            max-width: 132px;
+            padding: 17px 40px;
+        }
+        &__link:last-child {
+            max-width: 164px;
+            padding: 17px 27px;
+        }
+        &::after {
+            width: 100%;
+            background-size: cover !important;
         }
     }
 }

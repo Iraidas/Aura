@@ -40,6 +40,7 @@
         &__menu {
             width: 100%;
             margin: auto;
+            justify-content: space-around;
             border-top: 1px solid $grey_light;
         }
         &__menu-item {
@@ -52,7 +53,7 @@
 @media screen and (max-width: 426px) {
     .header {
         &__logo {
-            margin-left: 12px;
+            margin-left: 20px;
         }
         &__wallet {
             display: none;
@@ -64,16 +65,35 @@
             width: 28.5px;
             top: 0;
             right: 0;
-            margin-right: 12px;
+            margin-right: 20px;
             margin-left: auto;
             order: -1;
             background: url('@img/icons/icons.svg#wallet') 0 0 no-repeat;
             background-size: contain !important;
         }
         &__menu {
+            margin-left: 10px;
+            margin-right: 10px;
+            justify-content: space-between;
+        }
+        &__menu-item {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        &__logo {
+            margin-left: 12px;
+        }
+        &__wallet-mobile {
+            margin-right: 12px;
+        }
+        &__menu {
             margin-left: 2px;
             margin-right: 2px;
-            justify-content: space-between;
         }
     }
 }
