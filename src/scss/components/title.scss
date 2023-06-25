@@ -1,0 +1,11 @@
+.title {
+    color: white;
+    font-family: RussoOne, sans-serif;
+    font-size: 60px;
+}
+
+@media screen and (max-width: 426px) {
+	.title {
+        font-size: 30px;
+	}
+}

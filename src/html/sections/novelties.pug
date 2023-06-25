@@ -1,0 +1,40 @@
+section.novelties
+    .novelties__container
+        .novelties__top
+            .novelties__top-container.container
+                h2.novelties__title.title Новые стикеры
+                .novelties__example.example 
+                    .example__container.swiper 
+                        .example__wrapper.swiper-wrapper 
+                            .example__slide.swiper-slide 
+                                .example__picture
+                                    img(src="@img/Ghost-1.png" alt="Ghost 1" width="300" height="300")
+                                .example__picture
+                                    img(src="@img/Ghost-2.png" alt="Ghost 2" width="300" height="300")
+                                .example__picture
+                                    img(src="@img/Parental-Advisory-1.png" alt="Parental Advisory" width="624" height="300")
+                            .example__slide.swiper-slide 
+                                .example__picture
+                                    img(src="@img/chrome-is-dead.png" alt="chrome is dead" width="875" height="300")
+                                .example__picture
+                                    img(src="@img/Infinity.png" alt="Infinity" width="377" height="300")
+                            .example__slide.swiper-slide 
+                                .example__picture
+                                    img(src="@img/IAMDESIGNER-Circle.png" alt="IAMDESIGNER Circle" width="302" height="300")
+                                .example__picture
+                                    img(src="@img/Global-30.png" alt="Global" width="304" height="300")
+                                .example__picture
+                                    img(src="@img/Frankenstein-White.png" alt="Frankenstein White" width="624" height="300")
+                            .example__slide.swiper-slide 
+                                .example__picture
+                                    img(src="@img/new-wave.png" alt="new wave" width="1200" height="300")
+                    .example__pagination.swiper-pagination
+        .novelties__bottom
+            .novelties__bottom-container.container
+                form.novelties__form.form(action="")
+                    p.form__caption Будь в курсе новинок! Подпишись на рассылку!
+                    input.form__input.input(type="text" placeholder="Имя")
+                    input.form__input.input(type="email"  placeholder="E-mail")
+                    button.form__button.button-4(type="submit") Подписаться
+                    label.form__agreement(for="agreement") Согласен на обработку персональных данных
+                        input.form__checkbox(type="checkbox" id="agreement" name="Согласен на обработку персональных данных")
