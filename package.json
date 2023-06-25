@@ -39,6 +39,7 @@
     "gulp-webpcss": "latest",
     "node-w3c-validator": "^2.0.2",
     "sass": "latest",
+    "swiper": "^9.4.1",
     "webp-converter": "2.2.3",
     "webpack": "latest",
     "webpack-stream": "latest"
