@@ -1,0 +1,10 @@
+mixin card(srcMob, src, author, name, bid, dol)
+    .top-card__image 
+        picture.top-card__picture
+            source(srcset= srcMob media="(max-width: 985px)" width="108" height= "96")
+            img.top-card__cration-pic(src= src alt= name width="126" height= "142")
+    .top-card__caption 
+        p.top-card__author= author 
+        p.top-card__name= name 
+        p.top-card__bid= bid
+            span.top-card__bid-dol= dol
