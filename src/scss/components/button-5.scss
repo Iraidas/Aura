@@ -4,6 +4,7 @@
     color: $black;
     background: $primary;
     position: relative;
+    border: none;
     z-index: 5;
     &::before {
         content: "";

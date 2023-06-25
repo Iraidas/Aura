@@ -4,6 +4,7 @@
     color: white;
     position: relative;
     background: $button;
+    border: none;
     z-index: 5;
     &::before {
         content: "";

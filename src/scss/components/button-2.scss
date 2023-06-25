@@ -3,6 +3,7 @@
     padding: 25px 55px;
     background: $button;
     color: $black;
+    border: none;
 }
 
 @media ($device-hover) and ($device-pointer) {

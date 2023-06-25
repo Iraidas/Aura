@@ -266,8 +266,12 @@
                 right: 0;
             }
         }
+        &__list {
+            white-space: normal;
+        }
         &__caption {
             font-size: 20px;
+            white-space: normal;
         }
     }
 }

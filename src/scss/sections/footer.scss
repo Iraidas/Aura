@@ -7,21 +7,6 @@
         align-items: center;
         justify-content: space-between;
     }
-    &__link {
-        @media ($device-hover) and ($device-pointer) {
-            &:hover {
-                cursor: pointer;
-                color: white;
-            }
-            &:focus {
-                outline: 3px solid $active;
-                color: white;
-            }
-            &:active {
-                color: $active;
-            }
-        }
-    }
     &__bottom {
         background: $black;
     }
