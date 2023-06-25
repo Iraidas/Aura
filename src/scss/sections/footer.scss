@@ -1,71 +1,8 @@
 .footer {
     &__top {
-        background: $grey_deep;
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
-    &__top-container {
-        position: relative;
-        width: 100%;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 460px;
-            height: 160px;
-            top: 0;
-            right: 15px;
-            background: url('@img/smiles.png') 0 0 no-repeat;
-            background-size: contain !important;
-        }
-    }
-    &__caption {
-        color: white;
-        font-size: 24px;
-        font-family: Muller, sans-serif;
-        font-weight: 700;
-    }
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        padding-top: 25px !important;
-        margin-left: 40px;
-    }
-    &__list-item {
-        color: white;
-        font-size: 18px;
-        font-family: Muller, sans-serif;
-        font-weight: 400;
-        position: relative;
-        &::before{
-            content: "";
-            position: absolute;
-            top: -8px;
-            left: -40px;
-            width: 32px;
-            height: 32px;
-            background-size: contain !important;
-        }
-    }
-    &__list-item:first-child {
-        &::before{
-            background: url('@img/icons/icons.svg#images') 0 0 no-repeat;
-        }
-    }
-    &__list-item:nth-child(2) {
-        &::before{
-            background: url('@img/icons/icons.svg#smile') 0 0 no-repeat;
-        }
-    }
-    &__list-item:last-child {
-        &::before{
-            background: url('@img/icons/icons.svg#check-2') 0 0 no-repeat;
-        }
-    }
-    &__medium {
         background: $primary;
     }
-    &__medium-container {
+    &__top-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -102,12 +39,35 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 540px) {
     .footer {
         &__top-container {
-            &::before {
-                right: 40px;
-            }
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0 30px;
+            padding: 0;
+        }
+        &__link-group {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            border-top: 1px solid $black;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        &__link {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin: 0
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .footer {
+        &__link-group {
+            padding-left: 12px;
+            padding-right: 12px;
         }
     }
 }
