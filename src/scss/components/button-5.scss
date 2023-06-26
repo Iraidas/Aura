@@ -5,6 +5,7 @@
     background: $primary;
     position: relative;
     border: none;
+    max-height: 70px;
     z-index: 5;
     &::before {
         content: "";

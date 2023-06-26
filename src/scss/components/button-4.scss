@@ -4,6 +4,8 @@
     background: $primary;
     color: $black;
     border: none;
+    max-height: 70px;
+    max-width: 296px;
 }
 
 @media ($device-hover) and ($device-pointer) {

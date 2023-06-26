@@ -1,6 +1,4 @@
 .novelties {
-    &__container {
-    }
     &__top {
         background: $black;
     }
@@ -24,15 +22,26 @@
     }
     .example {
         padding-top: 32px;
-        &__container {
-        }
         &__wrapper {
+            .hidden-mob {
+                display: block;
+            }
+            .hidden-comp {
+                display: none;
+            }
         }
         &__slide {
             display: flex;
+            justify-content: center;
             gap: 0 28px;
+            .hidden-mob {
+                display: block;
+            }
+            .hidden-comp {
+                display: none;
+            }
         }
-        &__picture {
+        &__image {
             max-height: 300px;
             min-width: 132px;
             min-height: 132px;
@@ -50,8 +59,6 @@
     &__bottom {
         background: $red;
         overflow: hidden;
-    }
-    &__bottom-container {
     }
     .form {
         padding-top: 32px;
@@ -72,16 +79,17 @@
             font-family: Russo One, sans-serif;
             font-size: 20px;
             color: white;
+            white-space: nowrap;
             margin-bottom: 32px;
         }
         &__input {
             display: flex;
             max-width: 460px;
+            min-width: 296px;;
             width: 100%;
-            margin-top: 16px;
+            margin-bottom: 16px;
         }
         &__button {
-            margin-top: 16px;
             margin-bottom: 16px;
         }
         &__agreement {
@@ -112,6 +120,125 @@
             }
             &:checked::before {
                 display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1304px) {
+    .novelties {
+        .form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            &::after {
+                display: block;
+                position: relative;
+                grid-column: 2;
+                grid-row: 1/span 6;
+                right: 0;
+                top: 0px;
+                bottom: 0px;
+                max-width: 584px;
+                max-height: 390px;
+                min-width: 460px;
+                min-height: 391px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .novelties {
+		&__top-container {
+            padding-top: 32px;
+            padding-bottom: 64px;
+		}
+        .example {
+            &__wrapper {
+                align-self: center;
+                .hidden-mob {
+                    display: none;
+                }
+                .hidden-comp {
+                    display: block;
+                }
+            }
+            &__slide {
+                gap: 0 32px;
+                align-self: center;
+                .hidden-mob {
+                    display: none;
+                }
+                .hidden-comp {
+                    display: block;
+                }
+            }
+            &__image {
+                display: flex;
+                align-items: center;
+                img {
+                    margin: auto;
+                }
+            }
+            &__pagination {
+                padding-top: 22px;
+            }
+        }
+		&__bottom-container {
+            display: flex;
+            justify-content: center;
+            max-height: 466px;
+		}
+        .form {
+        display: block;
+            &::after {
+                display: block;
+                position: relative;
+                width: 296px;
+                height: 200px;
+                top: auto;
+                margin: 0 auto;
+                bottom: -20px;
+            }
+            &__caption {
+                margin-bottom: 16px;
+                white-space: normal;
+            }
+            &__input {
+                max-height: 50px;
+            }
+            &__button {
+                padding: 16px 50px;
+                font-size: 16px;
+                max-height: 50px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 631px) {
+    .novelties {
+		&__top-container {
+            padding-top: 32px;
+            padding-bottom: 64px;
+		}
+		&__title {
+            margin-left: 32px;
+            &::before {
+                top: 5px;
+                left: -32px;
+                width: 24px;
+                height: 24px;
+            }
+		}
+        &__bottom-container {
+            display: block;
+        }
+        .form {
+            &::after {
+                min-width: 296px;
+                min-height: 200px;
             }
         }
     }

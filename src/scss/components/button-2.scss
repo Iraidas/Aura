@@ -4,6 +4,7 @@
     background: $button;
     color: $black;
     border: none;
+    max-height: 70px;
 }
 
 @media ($device-hover) and ($device-pointer) {

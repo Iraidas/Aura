@@ -6,6 +6,7 @@
     color: white;
     border: none;
     background: $black;
+    max-height: 70px;
 }
 
 @media ($device-hover) and ($device-pointer) {

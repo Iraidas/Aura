@@ -34,3 +34,10 @@
         }
     }
 }
+
+
+@media screen and (max-width: 472px) {
+    .swiper-pagination-bullet {
+        padding: 14px 18px !important;
+    }
+}

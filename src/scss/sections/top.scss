@@ -6,11 +6,6 @@
     &__top-container {
         padding-bottom: 90px;
     }
-    &__title {
-        color: white;
-        font-family: RussoOne, sans-serif;
-        font-size: 60px;
-    }
     &__example-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -163,9 +158,6 @@
 
 @media screen and (max-width: 985px) {
     .top {
-		&__title {
-            font-size: 30px;
-		}
         &__top {
             padding-top: 64px;
         }
