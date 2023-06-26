@@ -1,0 +1,9 @@
+mixin item(src, author, name, bid, time)
+    .item&attributes(attributes)
+        .item__picture
+            img.item__cration-pic(src= src alt= name width="160" height= "160")
+        .item__caption 
+            p.item__author= author 
+            p.item__name= name 
+            p.item__bid= bid
+            p.item__time= time

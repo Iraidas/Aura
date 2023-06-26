@@ -1,0 +1,214 @@
+.auction {
+    &__container {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        color: $black;
+        justify-self: center;
+    }
+    &__mark {
+        color: $red;
+        border-radius: 40px;
+        border: 2px solid $red;
+        text-align: center;
+        font-size: 16px;
+        font-family: Muller, sans-serif;
+        font-weight: 700;
+        padding: 7px 13px 7px 24px;
+        margin-left: 31px;
+        margin-top: 7px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background: $red;
+            top: 12px;
+            left: 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+    }
+    .sticker {
+        display: grid;
+        grid-template-columns: 1fr 1.7fr;
+        gap: 32px;
+        padding-top: 32px;
+        &__picture {
+            grid-column: 1;
+            grid-row: 1/ span 6;
+        }
+        &__preview {
+            height: min-content;
+        }
+        &__author {
+            color: $black;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: Muller, sans-serif;
+            font-weight: 700;
+            border-radius: 23px;
+            background: $grey_light;
+            padding: 25px 16px 25px 80px;
+            width: min-content;
+            position: relative;
+            &::before {
+                content: "";
+                width: 48px;
+                height: 48px;
+                position: absolute;
+                top: 11px;
+                left: 11px;
+                background: url('@img/ellipse-1.png') 0 0 no-repeat;
+                background-size: contain !important;
+            }
+        }
+        &__name {
+            color: $black;
+            font-size: 48px;
+            font-family: Muller, sans-serif;
+            font-weight: 400;
+        }
+        &__timer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        &__bid {
+            color: $black;
+            font-family: Muller, sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            border-radius: 40px;
+            background: $grey_light;
+            padding: 32px;
+        }
+        &__bid-eth {
+            font-size: 48px;
+            padding-top: 16px;
+        }
+        &__bid-dol {
+            color: $grey_middle;
+            padding-top: 6px;
+        }
+        &__bid-timer {
+            color: white;
+            font-family: Muller, sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            border-radius: 40px;
+            background: $black;
+            padding: 32px;
+            position: relative;
+            max-width: 460px;
+            width: 100%;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 27px;
+                right: 32px;
+                width: 121px;
+                height: 121px;
+                background-size: contain !important;
+                background: url('@img/icons/icons.svg#clock') 0 0 no-repeat;
+            }
+        }
+        &__bid-timer-title {
+        }
+        &__bid-time {
+            word-spacing: 20px;
+            font-size: 48px;
+            padding-top: 16px;
+        }
+        &__bid-time-caption {
+            word-spacing: 47px;
+            padding-left: 13px;
+            padding-top: 6px;
+        }
+        &__button {
+        }
+    }
+    &__other-caption {
+        padding-top: 90px;
+        font-family: RussoOne, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        color: $black;
+    }
+    &__other-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(296px, 232px));
+        justify-content: space-evenly;
+        gap: 32px;
+        padding-top: 32px;
+    }
+    .item {
+        display: grid;
+        grid-template-rows: 174px 168px;
+        border-radius: 40px;
+        &__picture {
+            background: $grey_light;
+            border-radius: 40px 40px 0 0;
+            text-align: center;
+            align-self: center;
+            padding: 5px;
+        }
+        &__caption {
+            background: $black;
+            padding-top: 20px;
+            padding-left: 16px;
+            border-radius: 0 0 40px 40px;
+            color: white;
+            font-size: 16px;
+            font-family: Muller, sans-serif;
+            font-weight: 700;
+        }
+        &__author {
+            margin-left: 32px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -5px;
+                left: -32px;
+                width: 24px;
+                height: 24px;
+                background-size: contain !important;
+            }
+        }
+        &__name {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        &__bid {
+            font-size: 20px;
+            margin-top: 12px;
+            color: $primary;
+        }
+        &__time {
+            margin-top: 12px;
+            color: $grey_middle;
+        }
+    }
+    @for $i from 1 through 9 {
+        .item:nth-child(#{$i}) {
+            .item__author::before {
+                background: url('@img/ellipse-#{$i + 1}.png') 0 0 no-repeat;
+            }
+        }
+    }
+    &__button {
+        margin: 32px auto 0;
+    }
+}
+
+@media screen and (max-width: 1310px) {
+    .auction {
+        .hidden-item {
+            display: none;
+        }
+    }
+}

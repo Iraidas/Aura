@@ -1,0 +1,63 @@
+section.auction 
+    .auction__container.container 
+        h2.auction__title.title Аукцион
+            span.auction__mark Live auction
+        .auction__sticker.sticker
+            .sticker__picture 
+                img.sticker__preview(src="@img/Witcher.png" alt="Witcherrr_3 (xml_t5)" width="460" height="460")
+            p.sticker__author Serge_VM222
+            p.sticker__name Witcherrr_3 (xml_t5)
+            .sticker__timer-container
+                .sticker__bid 
+                    p.sticker__bid-title Ставка
+                    p.sticker__bid-eth 0.10 ETH
+                    p.sticker__bid-dol $351.24
+                .sticker__bid-timer 
+                    p.sticker__bid-timer-title Окончание через:
+                    p.sticker__bid-time 01 48 47
+                    p.sticker__bid-time-caption Час Мин сек
+            .sticker__button.button-4 Cделать ставку
+        p.auction__other-caption Другие аукционы
+        include ../mixins/item-card
+        .auction__other-items
+            +item('@img/Alien.png', 
+            'Frank.Nagval', 
+            'Alien (green) e_e', 
+            '0.02 ETH', 
+            '03 часа 25 мин 23 сек')
+            +item('@img/cobra_007.png', 
+            'CPH_777', 
+            'CoBRRRa', 
+            '0.5 ETH', 
+            '15 мин 03 сек')
+            +item('@img/Diamonds.png', 
+            'sUpah_kiLLah', 
+            'Diamonds (4)', 
+            '0.008 ETH', 
+            '23 часа 05 мин 08 сек')
+            +item('@img/Holofobia2.png', 
+            'ttgs', 
+            'Holofobia-2', 
+            '1.0 ETH', 
+            '01 час 15 мин 55 сек')
+            +item('@img/Baby-Yoda-1.png', 
+            'Peppppe22', 
+            'Baby Yoda 1', 
+            '0.2 ETH', 
+            '01 час 28 мин 11 сек')
+            +item('@img/alien-vs-predator-1.png', 
+            '1300e1440', 
+            'alien vs. predator (01)', 
+            '0.09 ETH', 
+            '08 часов 44 мин 43 сек')
+            +item('@img/IAMDECEPTICON.png', 
+            'Robert_Wward', 
+            'IAMDECEPTICON', 
+            '0.1 ETH', 
+            '55 мин 18 сек')(class="hidden-item")
+            +item('@img/Ghostbusters.png', 
+            'ttgs', 
+            'Ghostbusterrrrrrrs', 
+            '0.09 ETH', 
+            '18 мин 12 сек')(class="hidden-item")
+        .auction__button.button-5 Все аукционы
