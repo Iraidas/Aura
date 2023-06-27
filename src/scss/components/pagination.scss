@@ -1,43 +1,50 @@
-.swiper-pagination-bullet {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    opacity: 1 !important;
-    border-radius: 40px !important;
-    padding: 18px 28px !important;
-    background: $black;
-    border: 2px solid $red !important;
-    color: white;
+.swiper-pagination {
+    .swiper-pagination-bullet {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        opacity: 1 !important;
+        border-radius: 40px !important;
+        padding: 18px 28px !important;
+        background: $black;
+        border: 2px solid $red !important;
+        color: white;
+    }
+
+    .swiper-pagination-bullet-active{
+        background: $red !important;
+    }
 }
 
-.swiper-pagination-bullet-active{
-    background: $red !important;
-}
 
 @media ($device-hover) and ($device-pointer) {
-    .swiper-pagination-bullet {
-        &:hover {
-            cursor: pointer;
-            background: $secondary !important;
-            border: 2px solid $secondary !important;
-        }
-        &:focus {
-            cursor: pointer;
-            background: $secondary !important;
-            border: 2px solid $secondary !important;
-            outline: none !important;
-        }
-        &:active,
-        .swiper-pagination-bullet-active {
-            background: $red !important;
-            border: 2px solid $red !important;
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            &:hover {
+                cursor: pointer;
+                background: $secondary !important;
+                border: 2px solid $secondary !important;
+            }
+            &:focus {
+                cursor: pointer;
+                background: $secondary !important;
+                border: 2px solid $secondary !important;
+                outline: none !important;
+            }
+            &:active,
+            .swiper-pagination-bullet-active {
+                background: $red !important;
+                border: 2px solid $red !important;
+            }
         }
     }
 }
 
 
 @media screen and (max-width: 472px) {
-    .swiper-pagination-bullet {
-        padding: 14px 18px !important;
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            padding: 14px 18px !important;
+        }
     }
 }

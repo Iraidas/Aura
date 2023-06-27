@@ -34,12 +34,12 @@
     }
     .sticker {
         display: grid;
-        grid-template-columns: 1fr 1.7fr;
+        grid-template-columns: 460px auto;
         gap: 32px;
         padding-top: 32px;
         &__picture {
             grid-column: 1;
-            grid-row: 1/ span 6;
+            grid-row: 1/ span 4;
         }
         &__preview {
             height: min-content;
@@ -116,8 +116,6 @@
                 background: url('@img/icons/icons.svg#clock') 0 0 no-repeat;
             }
         }
-        &__bid-timer-title {
-        }
         &__bid-time {
             word-spacing: 20px;
             font-size: 48px;
@@ -128,8 +126,6 @@
             padding-left: 13px;
             padding-top: 6px;
         }
-        &__button {
-        }
     }
     &__other-caption {
         padding-top: 90px;
@@ -138,15 +134,16 @@
         font-size: 20px;
         color: $black;
     }
-    &__other-items {
+    &__other-wrapper{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(296px, 232px));
+        grid-template-columns: repeat(4, minmax(232px, 296px));
         justify-content: space-evenly;
         gap: 32px;
         padding-top: 32px;
     }
     .item {
         display: grid;
+        width: 100%;
         grid-template-rows: 174px 168px;
         border-radius: 40px;
         &__picture {
@@ -200,15 +197,250 @@
             }
         }
     }
+    &__pagination {
+        display: none;
+    }
     &__button {
         margin: 32px auto 0;
     }
 }
 
-@media screen and (max-width: 1310px) {
+@media screen and (max-width: 1054px) {
     .auction {
         .hidden-item {
             display: none;
+        }
+        &__other-wrapper{
+            grid-template-columns: repeat(3, minmax(232px, 296px));
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .auction {
+        .sticker {
+            grid-template-columns: repeat(2, 1fr);
+            &__author {
+                font-size: 16px;
+                padding: 15px 16px 15px 48px;
+                border-radius: 18px;
+                &::before {
+                    width: 24px;
+                    height: 24px;
+                    left: 16px;
+                }
+            }
+            &__name {
+                font-size: 30px;
+                white-space: nowrap;
+            }
+            &__timer-container {
+                flex-direction: column;
+            }
+            &__bid {
+                font-size: 16px;
+                border-radius: 18px;
+                padding: 16px;
+                width: max-content;
+            }
+            &__bid-eth {
+                font-size: 30px;
+            }
+            &__bid-dol {
+                padding-top: 16px;
+            }
+            &__bid-timer {
+                width: fit-content;
+                border-radius: 18px;
+                padding: 16px;
+                font-size: 16px;
+                height: max-content;
+                &::after {
+                    display: none;
+                }
+            }
+            &__bid-time {
+                font-size: 30px;
+            }
+            &__bid-time-caption {
+                word-spacing: 30px;
+                padding-left: 5px;
+            }
+            &__button {
+                font-size: 16px;
+                padding: 17px 24px;
+                max-width: 200px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 695px) {
+    .auction {
+        .sticker {
+            grid-template-columns: unset;
+            &__author {
+                border-radius: 23px;
+                padding: 25px 16px 25px 80px;
+                border-radius: 23px;
+                &::before {
+                    width: 48px;
+                    height: 48px;
+                    top: 11px;
+                    left: 11px;
+                }
+            }
+            &__name {
+                font-size: 48px;
+            }
+            &__timer-container {
+                flex-direction: row;
+            }
+            &__bid {
+                font-size: 20px;
+                border-radius: 40px;
+                padding: 32px;
+            }
+            &__bid-eth {
+                font-size: 42px;
+            }
+            &__bid-timer {
+                font-size: 20px;
+                border-radius: 40px;
+                padding: 32px;
+                &::after {
+                }
+            }
+            &__bid-time {
+                word-spacing: 20px;
+                font-size: 42px;
+                padding-top: 16px;
+            }
+            &__bid-time-caption {
+                word-spacing: 47px;
+                padding-left: 13px;
+                padding-top: 6px;
+            }
+            &__button {
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 832px) {
+    .auction {
+        &__other-wrapper{
+            grid-template-columns: repeat(2, minmax(232px, 296px));
+        }
+    }
+}
+
+@media screen and (max-width: 695px) {
+    .auction {
+        &__container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        &__other-container{
+            overflow: hidden;
+            max-width: 296px;
+            margin: auto;
+        }
+        &__other-wrapper{
+            display: flex;
+            min-width: 0;
+            gap: 0;
+            justify-content: unset;
+        }
+        &__other-caption {
+            padding-top: 80px;
+        }
+        &__item {
+            max-width: 296px;
+        }
+        &__pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        &__button {
+            font-size: 20px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 532px) {
+    .auction {
+        &__mark {
+            font-size: 12px;
+            padding-left: 21px;
+            max-width: 105px;
+            margin-left: 15px;
+            &::before {
+                height: 4px;
+                width: 4px;
+                top: 11px;
+                left: 10px;
+            }
+        }
+        .sticker {
+            gap: 16px;
+            &__author {
+                font-size: 16px;
+                padding: 15px 16px 15px 48px;
+                border-radius: 18px;
+                &::before {
+                    width: 24px;
+                    height: 24px;
+                    left: 16px;
+                }
+            }
+            &__name {
+                font-size: 30px;
+                white-space: nowrap;
+            }
+            &__timer-container {
+                flex-direction: column;
+            }
+            &__bid {
+                font-size: 16px;
+                border-radius: 18px;
+                padding: 16px;
+                width: max-content;
+            }
+            &__bid-eth {
+                font-size: 30px;
+            }
+            &__bid-dol {
+                padding-top: 16px;
+            }
+            &__timer-container {
+                gap: 16px;
+            }
+            &__bid-timer {
+                width: fit-content;
+                border-radius: 18px;
+                padding: 16px;
+                font-size: 16px;
+                height: max-content;
+                &::after {
+                    display: none;
+                }
+            }
+            &__bid-time {
+                font-size: 30px;
+            }
+            &__bid-time-caption {
+                word-spacing: 30px;
+                padding-left: 5px;
+            }
+            &__button {
+                font-size: 16px;
+                padding: 17px 24px;
+                max-width: 200px;
+                margin-top: 16px;
+            }
         }
     }
 }

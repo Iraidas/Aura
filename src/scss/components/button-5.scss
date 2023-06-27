@@ -18,6 +18,13 @@
     }
 }
 
+@media screen and (max-width: 695px) {
+    .button-5 {
+        padding: 17px 24px;
+        max-width: 200px;
+    }
+}
+
 @media ($device-hover) and ($device-pointer) {
     .button-5 {
         &:hover {
