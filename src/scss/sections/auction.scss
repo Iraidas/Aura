@@ -4,12 +4,12 @@
         padding-bottom: 90px;
     }
     &__title {
-        display: flex;
-        align-items: center;
+        display: inline;
         color: $black;
-        justify-self: center;
+        position: relative;
     }
     &__mark {
+        display: inline;
         color: $red;
         border-radius: 40px;
         border: 2px solid $red;
@@ -19,8 +19,10 @@
         font-weight: 700;
         padding: 7px 13px 7px 24px;
         margin-left: 31px;
-        margin-top: 7px;
-        position: relative;
+        margin-top: 25px;
+        position: absolute;
+        white-space: nowrap;
+        max-width: max-content;
         &::before {
             content: "";
             position: absolute;
@@ -275,8 +277,20 @@
     }
 }
 
+@media screen and (max-width: 832px) {
+    .auction {
+        &__other-wrapper{
+            grid-template-columns: repeat(2, minmax(232px, 296px));
+        }
+    }
+}
+
 @media screen and (max-width: 695px) {
     .auction {
+        &__container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
         .sticker {
             grid-template-columns: unset;
             &__author {
@@ -320,23 +334,6 @@
                 padding-top: 6px;
             }
         }
-    }
-}
-
-@media screen and (max-width: 832px) {
-    .auction {
-        &__other-wrapper{
-            grid-template-columns: repeat(2, minmax(232px, 296px));
-        }
-    }
-}
-
-@media screen and (max-width: 695px) {
-    .auction {
-        &__container {
-            padding-top: 80px;
-            padding-bottom: 80px;
-        }
         &__other-container{
             overflow: hidden;
             max-width: 296px;
@@ -365,14 +362,14 @@
     }
 }
 
-
-@media screen and (max-width: 532px) {
+@media screen and (max-width: 631px) {
     .auction {
         &__mark {
             font-size: 12px;
             padding-left: 21px;
             max-width: 105px;
             margin-left: 15px;
+            margin-top: 5px;
             &::before {
                 height: 4px;
                 width: 4px;
@@ -380,6 +377,11 @@
                 left: 10px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .auction {
         .sticker {
             gap: 16px;
             &__author {

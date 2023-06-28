@@ -27,7 +27,7 @@
     .header {
         &__container {
             flex-wrap: wrap;
-            padding: 0;
+            padding: 0 !important;
         }
         &__logo {
             order: -1;
@@ -72,8 +72,8 @@
             background-size: contain !important;
         }
         &__menu {
-            margin-left: 10px;
-            margin-right: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
             justify-content: space-between;
         }
         &__menu-item {
