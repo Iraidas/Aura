@@ -1,0 +1,70 @@
+.file-input {
+    border-radius: 40px;
+    position: relative;
+    background: $grey_light;
+    width: 624px;
+    height: 342px;
+    z-index: 5;
+    input {
+        width: 0px;
+        height: 0px;
+        margin-left: 50px;
+        z-index: 0;
+        appearance: none;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 98px;
+            left: 262px;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            border: 2px solid $grey_light;
+            background-color: white;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 128px;
+            left: 292px;
+            width: 40px;
+            height: 40px;
+            background: $grey_light;
+            clip-path: polygon(41% 0%,58% 0%,58% 42%,100% 42%,100% 58%,58% 58%,58% 100%,41% 100%,41% 58%,0% 58%,0% 42%,41% 42%);
+        }
+        &:focus {
+            border-color: $grey_light;
+            outline: none;
+            &::before {
+                border: 2px solid $primary;
+            }
+            &::after {
+                background: $primary;
+            }
+        }
+        &:active {
+            &::before {
+                border: 2px solid $active;
+            }
+            &::after {
+                background: $active;
+            }
+        }
+    }
+}
+
+@media ($device-hover) and ($device-pointer) {
+    .file-input {
+        input {
+            &:hover {
+                cursor: pointer;
+                &::before {
+                    border: 2px solid $primary;
+                }
+                &::after {
+                    background: $primary;
+                }
+            }
+        }
+    }
+}
