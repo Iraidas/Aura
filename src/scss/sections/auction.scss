@@ -308,8 +308,6 @@
                 font-size: 20px;
                 border-radius: 40px;
                 padding: 32px;
-                &::after {
-                }
             }
             &__bid-time {
                 word-spacing: 20px;
@@ -320,8 +318,6 @@
                 word-spacing: 47px;
                 padding-left: 13px;
                 padding-top: 6px;
-            }
-            &__button {
             }
         }
     }

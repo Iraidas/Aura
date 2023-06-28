@@ -3,7 +3,6 @@ export function fileInput(){
     const preview = document.querySelector(".preview");
     input.addEventListener("change", updateImageDisplay);
 
-
     function updateImageDisplay () {
         while (preview.firstChild) {
             preview.removeChild(preview.firstChild);
@@ -13,17 +12,16 @@ export function fileInput(){
         
         if (curFiles.length === 0) {
             const para = document.createElement("p");
-            para.textContent = "No files currently selected for upload";
+            para.textContent = "Прикрепить работы (.jpeg / .png)";
             preview.appendChild(para);
         } else {
             for (const file of curFiles) {
-                const preview = document.querySelector(".preview");
                 const para = document.createElement("p");
                 if (validFileType(file)) {
                     para.textContent = `${file.name}`;
                     preview.appendChild(para);
             } else {
-                para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
+                para.textContent = `${file.name}: недопустимый тип файла. Выберите другой.`;
                 preview.appendChild(para);
             }
                 preview.appendChild(para);

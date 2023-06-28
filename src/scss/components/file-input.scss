@@ -21,6 +21,7 @@
             border-radius: 100px;
             border: 2px solid $grey_light;
             background-color: white;
+            transition: 0.2s ease;
         }
         &::after {
             content: "";
@@ -31,6 +32,7 @@
             height: 40px;
             background: $grey_light;
             clip-path: polygon(41% 0%,58% 0%,58% 42%,100% 42%,100% 58%,58% 58%,58% 100%,41% 100%,41% 58%,0% 58%,0% 42%,41% 42%);
+            transition: 0.2s ease;
         }
         &:focus {
             border-color: $grey_light;
@@ -44,10 +46,10 @@
         }
         &:active {
             &::before {
-                border: 2px solid $active;
+                border: 2px solid $active !important;
             }
             &::after {
-                background: $active;
+                background: $active !important;
             }
         }
     }
@@ -57,7 +59,6 @@
     .file-input {
         input {
             &:hover {
-                cursor: pointer;
                 &::before {
                     border: 2px solid $primary;
                 }
@@ -65,6 +66,11 @@
                     background: $primary;
                 }
             }
+        }
+    }
+    .file-input {
+        &:hover {
+            cursor: pointer;
         }
     }
 }
