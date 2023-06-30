@@ -13,7 +13,7 @@ export const images = () => {
         .pipe(
             app.plugins.if(
                 app.isBuild,
-                webp()    
+                webp()
             )
         )
         .pipe(
